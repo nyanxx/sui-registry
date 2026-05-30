@@ -5,31 +5,148 @@
       "reveal-item": {
         "group": "interactive",
         "description": "Context-driven reveal/hide primitive",
-        "files": [
-          "components/reveal-item.tsx"
-        ],
+        "files": ["components/interactive/reveal-item.tsx"],
         "dependencies": [],
         "devDependencies": [],
-        "requires": [
-          "shadcn:button",
-          "lib:utils"
-        ]
+        "requires": ["shadcn:button", "lib:utils"]
+      },
+      "typography-h1": {
+        "group": "typography",
+        "description": "H1 heading with display, default, and small variants. Uses extrabold weight, tight tracking, and text-balance for large hero and page titles.",
+        "files": ["components/typography/typography-h1.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-h2": {
+        "group": "typography",
+        "description": "H2 heading with default, muted, dimmed, and section (bordered bottom) variants. Includes scroll-margin for anchor links.",
+        "files": ["components/typography/typography-h2.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-h3": {
+        "group": "typography",
+        "description": "H3 heading with default, muted, and dimmed variants. Includes scroll-margin for anchor links.",
+        "files": ["components/typography/typography-h3.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-h4": {
+        "group": "typography",
+        "description": "H4 heading with default, muted, and dimmed variants. Includes scroll-margin for anchor links.",
+        "files": ["components/typography/typography-h4.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-p": {
+        "group": "typography",
+        "description": "Paragraph primitive with semantic variants: body, lead, muted, caption, error, and success. Each variant bundles size, line-height, color, and weight together.",
+        "files": ["components/typography/typography-p.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": ["lib:utils"]
+      },
+      "typography-lead": {
+        "group": "typography",
+        "description": "Lead paragraph for subtitles and intro text. Default is text-xl, small variant is responsive sm→base.",
+        "files": ["components/typography/typography-lead.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-large": {
+        "group": "typography",
+        "description": "Large semibold text primitive with default and muted color variants. Renders as a <p> element.",
+        "files": ["components/typography/typography-large.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-small": {
+        "group": "typography",
+        "description": "Small text primitive with default, muted, label (uppercase + tracking), and error variants.",
+        "files": ["components/typography/typography-small.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-muted": {
+        "group": "typography",
+        "description": "Muted text primitive with sm, md, and lg size variants. Always renders text-muted-foreground.",
+        "files": ["components/typography/typography-muted.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-blockquote": {
+        "group": "typography",
+        "description": "Blockquote with default, muted, and accent (primary border) variants. No built-in margin — spacing is the consumer's responsibility.",
+        "files": ["components/typography/typography-blockquote.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-inlinecode": {
+        "group": "typography",
+        "description": "Inline code span with default (muted bg), destructive, and ghost (underline dashed) variants. Monospaced, semibold.",
+        "files": ["components/typography/typography-inlinecode.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-chapter": {
+        "group": "typography",
+        "description": "Vertical rhythm container for grouping text blocks with consistent gap spacing.",
+        "files": ["components/typography/typography-chapter.tsx"],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": ["lib:utils"]
+      },
+      "table": {
+        "group": "data-display",
+        "description": "Composable table primitives: Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption. Supports hover, selected state, and even-row striping.",
+        "files": ["components/data-display/table.tsx"],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": ["lib:utils"]
+      },
+      "list": {
+        "group": "data-display",
+        "description": "Full composable list system with disc, check, numbered, steps, and icon variants. Includes ListItem, ListItemMarker (with index prop), ListItemCheckbox, and a separate DescriptionList set (dl/dt/dd) for key-value pairs. Variant is shared via context — no manual prop threading needed.",
+        "files": ["components/data-display/list.tsx"],
+        "dependencies": ["class-variance-authority", "lucide-react"],
+        "devDependencies": [],
+        "requires": ["lib:utils"]
+      },
+      "simple-list": {
+        "group": "data-display",
+        "description": "Lightweight list with disc, check, and plain item variants. Supports bordered style and sm/md/lg sizes. Bullet and text are baseline-aligned via shared leading-6.",
+        "files": ["components/data-display/simple-list.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": ["lib:utils"]
+      },
+      "texted-separator": {
+        "group": "layout",
+        "description": "A horizontal separator with centered inline text. Default and strong variants. Built on shadcn Separator.",
+        "files": ["components/layout/texted-separator.tsx"],
+        "dependencies": ["class-variance-authority"],
+        "devDependencies": [],
+        "requires": ["shadcn:separator", "lib:utils"]
       }
     },
     "sections": {
       "faq-accordion": {
         "group": "faq",
         "description": "A clean FAQ section using reveal-item to show/hide answers",
-        "files": [
-          "sections/faq-accordion.tsx"
-        ],
+        "files": ["sections/faq-accordion.tsx"],
         "dependencies": [],
         "devDependencies": [],
-        "requires": [
-          "component:reveal-item",
-          "shadcn:button",
-          "lib:utils"
-        ]
+        "requires": ["component:reveal-item", "shadcn:button", "lib:utils"]
       }
     },
     "pages": {},
