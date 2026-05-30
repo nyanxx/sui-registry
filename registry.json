@@ -1,0 +1,29 @@
+{
+  "version": "0.0.0",
+  "categories": {
+    "components": {
+      "reveal-item": {
+        "group": "interactive",
+        "description": "Context-driven reveal/hide primitive",
+        "files": ["components/reveal-item.tsx"],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": ["shadcn:button", "lib:utils"]
+      }
+    },
+    "sections": {
+      "faq-accordion": {
+        "group": "faq",
+        "description": "A clean FAQ section using reveal-item to show/hide answers",
+        "files": ["sections/faq-accordion.tsx"],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": ["component:reveal-item", "shadcn:button", "lib:utils"]
+      }
+    },
+    "pages": {},
+    "hooks": {},
+    "templates": {},
+    "utils": {}
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "sui-registry",
+  "version": "0.0.0",
+  "description": "sui Registry",
+  "scripts": {
+    "bump": "changeset version && node ./sync-version/sync-version.js"
+  },
+  "keywords": [],
+  "author": "Nayan",
+  "license": "MIT",
+  "packageManager": "pnpm@10.33.0",
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0"
+  }
+}
