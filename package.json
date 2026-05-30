@@ -1,6 +1,6 @@
 {
   "name": "sui-registry",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "sui Registry",
   "scripts": {
     "bump": "changeset version && node ./sync-version/sync-version.js"
