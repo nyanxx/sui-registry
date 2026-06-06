@@ -1,11 +1,11 @@
 {
   "name": "sui-registry",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "sui Registry",
   "scripts": {
-    "change-commit": "pnpm run build:registry && git status", 
+    "change-commit": "pnpm run build:registry && git status",
     "build:registry": "node ./scripts/build-registry.js",
-    "bump": "pnpm dlx changeset version && node ./scripts/sync-version.js"
+    "bump": "pnpm changeset version && node ./scripts/sync-version.js"
   },
   "keywords": [],
   "author": "Nayan",

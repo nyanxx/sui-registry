@@ -1,5 +1,11 @@
 # sui-registry
 
+## 0.3.0
+
+### Minor Changes
+
+- 9e86454: Automated registry management with a new builder script and updated registry.json to include all current components, sections, pages, and pets.
+
 ## 0.2.0
 
 ### Minor Changes
