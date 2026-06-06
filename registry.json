@@ -2,9 +2,10 @@
   "version": "0.3.0",
   "categories": {
     "components": {
-      "list": {
+      "components/data-display/list": {
+        "name": "list",
         "group": "data-display",
-        "description": "Full composable list system with disc, check, numbered, steps, and icon variants. Includes ListItem, ListItemMarker (with index prop), ListItemCheckbox, and a separate DescriptionList set (dl/dt/dd) for key-value pairs. Variant is shared via context — no manual prop threading needed.",
+        "description": "list component",
         "files": [
           "components/data-display/list.tsx"
         ],
@@ -17,9 +18,10 @@
           "lib:utils"
         ]
       },
-      "simple-list": {
+      "components/data-display/simple-list": {
+        "name": "simple-list",
         "group": "data-display",
-        "description": "Lightweight list with disc, check, and plain item variants. Supports bordered style and sm/md/lg sizes. Bullet and text are baseline-aligned via shared leading-6.",
+        "description": "simple-list component",
         "files": [
           "components/data-display/simple-list.tsx"
         ],
@@ -31,9 +33,10 @@
           "lib:utils"
         ]
       },
-      "table": {
+      "components/data-display/table": {
+        "name": "table",
         "group": "data-display",
-        "description": "Composable table primitives: Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption. Supports hover, selected state, and even-row striping.",
+        "description": "table component",
         "files": [
           "components/data-display/table.tsx"
         ],
@@ -43,9 +46,10 @@
           "lib:utils"
         ]
       },
-      "reveal-item": {
+      "components/interactive/reveal-item": {
+        "name": "reveal-item",
         "group": "interactive",
-        "description": "Context-driven reveal/hide primitive",
+        "description": "reveal-item component",
         "files": [
           "components/interactive/reveal-item.tsx"
         ],
@@ -56,9 +60,10 @@
           "shadcn:button"
         ]
       },
-      "texted-separator": {
+      "components/layout/texted-separator": {
+        "name": "texted-separator",
         "group": "layout",
-        "description": "A horizontal separator with centered inline text. Default and strong variants. Built on shadcn Separator.",
+        "description": "texted-separator component",
         "files": [
           "components/layout/texted-separator.tsx"
         ],
@@ -67,12 +72,13 @@
         ],
         "devDependencies": [],
         "requires": [
-          "component:separator"
+          "shadcn:separator"
         ]
       },
-      "typography-blockquote": {
+      "components/typography/typography-blockquote": {
+        "name": "typography-blockquote",
         "group": "typography",
-        "description": "Blockquote with default, muted, and accent (primary border) variants. No built-in margin — spacing is the consumer's responsibility.",
+        "description": "typography-blockquote component",
         "files": [
           "components/typography/typography-blockquote.tsx"
         ],
@@ -82,9 +88,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-chapter": {
+      "components/typography/typography-chapter": {
+        "name": "typography-chapter",
         "group": "typography",
-        "description": "Vertical rhythm container for grouping text blocks with consistent gap spacing.",
+        "description": "typography-chapter component",
         "files": [
           "components/typography/typography-chapter.tsx"
         ],
@@ -94,9 +101,10 @@
           "lib:utils"
         ]
       },
-      "typography-h1": {
+      "components/typography/typography-h1": {
+        "name": "typography-h1",
         "group": "typography",
-        "description": "H1 heading with display, default, and small variants. Uses extrabold weight, tight tracking, and text-balance for large hero and page titles.",
+        "description": "typography-h1 component",
         "files": [
           "components/typography/typography-h1.tsx"
         ],
@@ -106,9 +114,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-h2": {
+      "components/typography/typography-h2": {
+        "name": "typography-h2",
         "group": "typography",
-        "description": "H2 heading with default, muted, dimmed, and section (bordered bottom) variants. Includes scroll-margin for anchor links.",
+        "description": "typography-h2 component",
         "files": [
           "components/typography/typography-h2.tsx"
         ],
@@ -118,9 +127,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-h3": {
+      "components/typography/typography-h3": {
+        "name": "typography-h3",
         "group": "typography",
-        "description": "H3 heading with default, muted, and dimmed variants. Includes scroll-margin for anchor links.",
+        "description": "typography-h3 component",
         "files": [
           "components/typography/typography-h3.tsx"
         ],
@@ -130,9 +140,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-h4": {
+      "components/typography/typography-h4": {
+        "name": "typography-h4",
         "group": "typography",
-        "description": "H4 heading with default, muted, and dimmed variants. Includes scroll-margin for anchor links.",
+        "description": "typography-h4 component",
         "files": [
           "components/typography/typography-h4.tsx"
         ],
@@ -142,9 +153,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-inlinecode": {
+      "components/typography/typography-inlinecode": {
+        "name": "typography-inlinecode",
         "group": "typography",
-        "description": "Inline code span with default (muted bg), destructive, and ghost (underline dashed) variants. Monospaced, semibold.",
+        "description": "typography-inlinecode component",
         "files": [
           "components/typography/typography-inlinecode.tsx"
         ],
@@ -154,9 +166,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-large": {
+      "components/typography/typography-large": {
+        "name": "typography-large",
         "group": "typography",
-        "description": "Large semibold text primitive with default and muted color variants. Renders as a <p> element.",
+        "description": "typography-large component",
         "files": [
           "components/typography/typography-large.tsx"
         ],
@@ -166,9 +179,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-lead": {
+      "components/typography/typography-lead": {
+        "name": "typography-lead",
         "group": "typography",
-        "description": "Lead paragraph for subtitles and intro text. Default is text-xl, small variant is responsive sm→base.",
+        "description": "typography-lead component",
         "files": [
           "components/typography/typography-lead.tsx"
         ],
@@ -178,9 +192,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-muted": {
+      "components/typography/typography-muted": {
+        "name": "typography-muted",
         "group": "typography",
-        "description": "Muted text primitive with sm, md, and lg size variants. Always renders text-muted-foreground.",
+        "description": "typography-muted component",
         "files": [
           "components/typography/typography-muted.tsx"
         ],
@@ -190,9 +205,10 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-p": {
+      "components/typography/typography-p": {
+        "name": "typography-p",
         "group": "typography",
-        "description": "Paragraph primitive with semantic variants: body, lead, muted, caption, error, and success. Each variant bundles size, line-height, color, and weight together.",
+        "description": "typography-p component",
         "files": [
           "components/typography/typography-p.tsx"
         ],
@@ -204,9 +220,10 @@
           "lib:utils"
         ]
       },
-      "typography-small": {
+      "components/typography/typography-small": {
+        "name": "typography-small",
         "group": "typography",
-        "description": "Small text primitive with default, muted, label (uppercase + tracking), and error variants.",
+        "description": "typography-small component",
         "files": [
           "components/typography/typography-small.tsx"
         ],
@@ -218,21 +235,23 @@
       }
     },
     "sections": {
-      "faq-accordion": {
+      "sections/faq/faq-accordion": {
+        "name": "faq-accordion",
         "group": "faq",
-        "description": "A clean FAQ section using reveal-item to show/hide answers",
+        "description": "faq-accordion component",
         "files": [
           "sections/faq/faq-accordion.tsx"
         ],
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "component:reveal-item"
+          "components/interactive/reveal-item"
         ]
       }
     },
     "pages": {
-      "not-found-ambient": {
+      "pages/not-found/not-found-ambient": {
+        "name": "not-found-ambient",
         "group": "not-found",
         "description": "not-found-ambient component",
         "files": [
@@ -241,13 +260,14 @@
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "pets:BgPattern",
-          "pets:Glow"
+          "pets/bg-pattern",
+          "pets/glow"
         ]
       }
     },
     "pets": {
-      "bg-pattern": {
+      "pets/bg-pattern": {
+        "name": "bg-pattern",
         "group": "pets",
         "description": "Background pattern */",
         "files": [
@@ -259,7 +279,8 @@
         "devDependencies": [],
         "requires": []
       },
-      "glow": {
+      "pets/glow": {
+        "name": "glow",
         "group": "pets",
         "description": "glow component",
         "files": [

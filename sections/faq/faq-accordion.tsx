@@ -3,7 +3,7 @@ import {
   RevealAction,
   RevealItem,
   RevealProvider,
-} from "@/components/reveal-item";
+} from "@/components/interactive/reveal-item";
 
 const faqs = [
   {

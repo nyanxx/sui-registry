@@ -34,13 +34,6 @@ function parseMetadata(content) {
   };
 }
 
-function toPascalCase(str) {
-  return str
-    .split(/[-_]/)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join("");
-}
-
 function parseImports(content) {
   const dependencies = new Set();
   const requires = new Set();
@@ -51,25 +44,37 @@ function parseImports(content) {
   while ((match = importRegex.exec(content)) !== null) {
     const importPath = match[1];
 
-    if (importPath.startsWith("@/lib/utils")) {
-      requires.add("lib:utils");
-    } else if (
-      importPath.startsWith("@/components/pets/") ||
-      importPath.startsWith("@/pets/")
-    ) {
-      const name = importPath.split("/").pop();
-      requires.add(`pets:${toPascalCase(name)}`);
-    } else if (importPath.startsWith("@/components/")) {
-      const parts = importPath.split("/");
-      const name = parts[parts.length - 1];
-      if (name !== "ui") {
-        // ignore the UI folder itself
-        requires.add(`component:${name}`);
+    // 1. Internal Path-based Requirements (starting with @/)
+    if (importPath.startsWith("@/")) {
+      let pathAfterAlias = importPath.replace("@/", "");
+
+      // Normalize inconsistent paths (e.g., components/pets -> pets)
+      if (pathAfterAlias.startsWith("components/pets/")) {
+        pathAfterAlias = pathAfterAlias.replace("components/pets/", "pets/");
       }
-    } else if (importPath.startsWith("./ui/")) {
+
+      // Handle special virtual/external requirements
+      if (pathAfterAlias.startsWith("lib/utils")) {
+        requires.add("lib:utils");
+      } else if (pathAfterAlias.startsWith("components/ui/")) {
+        const name = pathAfterAlias.split("/").pop();
+        requires.add(`shadcn:${name}`);
+      } else {
+        // Standard internal path ID
+        requires.add(pathAfterAlias);
+      }
+      continue;
+    }
+
+    // 2. Relative UI imports (fallback)
+    if (importPath.startsWith("./ui/")) {
       const name = importPath.split("/").pop();
       requires.add(`shadcn:${name}`);
-    } else if (!importPath.startsWith(".") && !importPath.startsWith("@/")) {
+      continue;
+    }
+
+    // 3. External NPM dependencies
+    if (!importPath.startsWith(".") && !importPath.startsWith("@/")) {
       const pkgName = importPath.startsWith("@")
         ? importPath.split("/").slice(0, 2).join("/")
         : importPath.split("/")[0];
@@ -99,13 +104,14 @@ function buildRegistry() {
 
     files.forEach((fullPath) => {
       const relativePath = path.relative(path.join(__dirname, ".."), fullPath);
-      const content = fs.readFileSync(fullPath, "utf8");
+      const itemID = relativePath.replace(/\\/g, "/").replace(/\.tsx?$/, "");
       const fileName = path.basename(fullPath, path.extname(fullPath));
 
       const dirName = path.dirname(relativePath);
       const parts = dirName.split(path.sep);
       const group = parts.length > 1 ? parts[1] : cat;
 
+      const content = fs.readFileSync(fullPath, "utf8");
       const meta = parseMetadata(content);
       const { dependencies, requires } = parseImports(content);
 
@@ -114,16 +120,16 @@ function buildRegistry() {
       if (
         !description &&
         existingRegistry.categories[cat] &&
-        existingRegistry.categories[cat][fileName]
+        existingRegistry.categories[cat][itemID]
       ) {
-        description = existingRegistry.categories[cat][fileName].description;
+        description = existingRegistry.categories[cat][itemID].description;
       }
       if (!description || description.endsWith(" component")) {
-        // If it was a default one, maybe we can keep it or improve it
         description = description || `${fileName} component`;
       }
 
-      registry.categories[cat][fileName] = {
+      registry.categories[cat][itemID] = {
+        name: fileName,
         group,
         description,
         files: [relativePath.replace(/\\/g, "/")],
@@ -135,14 +141,7 @@ function buildRegistry() {
   });
 
   fs.writeFileSync(REGISTRY_PATH, JSON.stringify(registry, null, 2) + "\n");
-  console.log("✅ Registry updated! Descriptions preserved.");
+  console.log("✅ Registry updated with path-based IDs!");
 }
 
 buildRegistry();
-
-// To add a new component: Just create the file. Run npm run build:registry, and it will appear in the JSON with all its dependencies correctly linked.
-// To add a description: You have two choices:
-// 1. Directly in the code (Recommended): Add a comment at the top of your component file:
-//   1         /** @description This is a beautiful button */
-//   2         export function MyButton() ...
-// 2. In the JSON: Edit it in registry.json once. The script is smart enough to see it and keep it forever.
