@@ -2,6 +2,47 @@
   "version": "0.2.0",
   "categories": {
     "components": {
+      "list": {
+        "group": "data-display",
+        "description": "Full composable list system with disc, check, numbered, steps, and icon variants. Includes ListItem, ListItemMarker (with index prop), ListItemCheckbox, and a separate DescriptionList set (dl/dt/dd) for key-value pairs. Variant is shared via context — no manual prop threading needed.",
+        "files": [
+          "components/data-display/list.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority",
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "simple-list": {
+        "group": "data-display",
+        "description": "Lightweight list with disc, check, and plain item variants. Supports bordered style and sm/md/lg sizes. Bullet and text are baseline-aligned via shared leading-6.",
+        "files": [
+          "components/data-display/simple-list.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "table": {
+        "group": "data-display",
+        "description": "Composable table primitives: Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption. Supports hover, selected state, and even-row striping.",
+        "files": [
+          "components/data-display/table.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
       "reveal-item": {
         "group": "interactive",
         "description": "Context-driven reveal/hide primitive",
@@ -11,7 +52,45 @@
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "shadcn:button",
+          "lib:utils",
+          "shadcn:button"
+        ]
+      },
+      "texted-separator": {
+        "group": "layout",
+        "description": "A horizontal separator with centered inline text. Default and strong variants. Built on shadcn Separator.",
+        "files": [
+          "components/layout/texted-separator.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "component:separator"
+        ]
+      },
+      "typography-blockquote": {
+        "group": "typography",
+        "description": "Blockquote with default, muted, and accent (primary border) variants. No built-in margin — spacing is the consumer's responsibility.",
+        "files": [
+          "components/typography/typography-blockquote.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
+      },
+      "typography-chapter": {
+        "group": "typography",
+        "description": "Vertical rhythm container for grouping text blocks with consistent gap spacing.",
+        "files": [
+          "components/typography/typography-chapter.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
           "lib:utils"
         ]
       },
@@ -63,25 +142,11 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-p": {
+      "typography-inlinecode": {
         "group": "typography",
-        "description": "Paragraph primitive with semantic variants: body, lead, muted, caption, error, and success. Each variant bundles size, line-height, color, and weight together.",
+        "description": "Inline code span with default (muted bg), destructive, and ghost (underline dashed) variants. Monospaced, semibold.",
         "files": [
-          "components/typography/typography-p.tsx"
-        ],
-        "dependencies": [
-          "class-variance-authority"
-        ],
-        "devDependencies": [],
-        "requires": [
-          "lib:utils"
-        ]
-      },
-      "typography-lead": {
-        "group": "typography",
-        "description": "Lead paragraph for subtitles and intro text. Default is text-xl, small variant is responsive sm→base.",
-        "files": [
-          "components/typography/typography-lead.tsx"
+          "components/typography/typography-inlinecode.tsx"
         ],
         "dependencies": [
           "class-variance-authority"
@@ -101,11 +166,11 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-small": {
+      "typography-lead": {
         "group": "typography",
-        "description": "Small text primitive with default, muted, label (uppercase + tracking), and error variants.",
+        "description": "Lead paragraph for subtitles and intro text. Default is text-xl, small variant is responsive sm→base.",
         "files": [
-          "components/typography/typography-small.tsx"
+          "components/typography/typography-lead.tsx"
         ],
         "dependencies": [
           "class-variance-authority"
@@ -125,97 +190,31 @@
         "devDependencies": [],
         "requires": []
       },
-      "typography-blockquote": {
+      "typography-p": {
         "group": "typography",
-        "description": "Blockquote with default, muted, and accent (primary border) variants. No built-in margin — spacing is the consumer's responsibility.",
+        "description": "Paragraph primitive with semantic variants: body, lead, muted, caption, error, and success. Each variant bundles size, line-height, color, and weight together.",
         "files": [
-          "components/typography/typography-blockquote.tsx"
+          "components/typography/typography-p.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "typography-small": {
+        "group": "typography",
+        "description": "Small text primitive with default, muted, label (uppercase + tracking), and error variants.",
+        "files": [
+          "components/typography/typography-small.tsx"
         ],
         "dependencies": [
           "class-variance-authority"
         ],
         "devDependencies": [],
         "requires": []
-      },
-      "typography-inlinecode": {
-        "group": "typography",
-        "description": "Inline code span with default (muted bg), destructive, and ghost (underline dashed) variants. Monospaced, semibold.",
-        "files": [
-          "components/typography/typography-inlinecode.tsx"
-        ],
-        "dependencies": [
-          "class-variance-authority"
-        ],
-        "devDependencies": [],
-        "requires": []
-      },
-      "typography-chapter": {
-        "group": "typography",
-        "description": "Vertical rhythm container for grouping text blocks with consistent gap spacing.",
-        "files": [
-          "components/typography/typography-chapter.tsx"
-        ],
-        "dependencies": [],
-        "devDependencies": [],
-        "requires": [
-          "lib:utils"
-        ]
-      },
-      "table": {
-        "group": "data-display",
-        "description": "Composable table primitives: Table, TableHeader, TableBody, TableFooter, TableRow, TableHead, TableCell, TableCaption. Supports hover, selected state, and even-row striping.",
-        "files": [
-          "components/data-display/table.tsx"
-        ],
-        "dependencies": [],
-        "devDependencies": [],
-        "requires": [
-          "lib:utils"
-        ]
-      },
-      "list": {
-        "group": "data-display",
-        "description": "Full composable list system with disc, check, numbered, steps, and icon variants. Includes ListItem, ListItemMarker (with index prop), ListItemCheckbox, and a separate DescriptionList set (dl/dt/dd) for key-value pairs. Variant is shared via context — no manual prop threading needed.",
-        "files": [
-          "components/data-display/list.tsx"
-        ],
-        "dependencies": [
-          "class-variance-authority",
-          "lucide-react"
-        ],
-        "devDependencies": [],
-        "requires": [
-          "lib:utils"
-        ]
-      },
-      "simple-list": {
-        "group": "data-display",
-        "description": "Lightweight list with disc, check, and plain item variants. Supports bordered style and sm/md/lg sizes. Bullet and text are baseline-aligned via shared leading-6.",
-        "files": [
-          "components/data-display/simple-list.tsx"
-        ],
-        "dependencies": [
-          "class-variance-authority"
-        ],
-        "devDependencies": [],
-        "requires": [
-          "lib:utils"
-        ]
-      },
-      "texted-separator": {
-        "group": "layout",
-        "description": "A horizontal separator with centered inline text. Default and strong variants. Built on shadcn Separator.",
-        "files": [
-          "components/layout/texted-separator.tsx"
-        ],
-        "dependencies": [
-          "class-variance-authority"
-        ],
-        "devDependencies": [],
-        "requires": [
-          "shadcn:separator",
-          "lib:utils"
-        ]
       }
     },
     "sections": {
@@ -223,20 +222,58 @@
         "group": "faq",
         "description": "A clean FAQ section using reveal-item to show/hide answers",
         "files": [
-          "sections/faq-accordion.tsx"
+          "sections/faq/faq-accordion.tsx"
         ],
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "component:reveal-item",
-          "shadcn:button",
+          "component:reveal-item"
+        ]
+      }
+    },
+    "pages": {
+      "not-found-ambient": {
+        "group": "not-found",
+        "description": "not-found-ambient component",
+        "files": [
+          "pages/not-found/not-found-ambient.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "pets:BgPattern",
+          "pets:Glow"
+        ]
+      }
+    },
+    "pets": {
+      "bg-pattern": {
+        "group": "pets",
+        "description": "Background pattern */",
+        "files": [
+          "pets/bg-pattern.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
+      },
+      "glow": {
+        "group": "pets",
+        "description": "glow component",
+        "files": [
+          "pets/glow.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
           "lib:utils"
         ]
       }
     },
-    "pages": {},
-    "hooks": {},
-    "templates": {},
     "utils": {}
   }
 }
