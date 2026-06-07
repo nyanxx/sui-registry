@@ -250,6 +250,21 @@
       }
     },
     "pages": {
+      "pages/code-showcase": {
+        "name": "code-showcase",
+        "group": "pages",
+        "description": "code-showcase component",
+        "files": [
+          "pages/code-showcase.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "pets/bg-pattern",
+          "pets/code-block",
+          "pets/tabs"
+        ]
+      },
       "pages/not-found/not-found-ambient": {
         "name": "not-found-ambient",
         "group": "not-found",
@@ -263,15 +278,53 @@
           "pets/bg-pattern",
           "pets/glow"
         ]
+      },
+      "pages/not-found/not-found-hacker": {
+        "name": "not-found-hacker",
+        "group": "not-found",
+        "description": "not-found-hacker component",
+        "files": [
+          "pages/not-found/not-found-hacker.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "pets/flicker",
+          "pets/glitch",
+          "pets/gradient-line",
+          "pets/matrix-bg",
+          "pets/scan-line",
+          "pets/terminal",
+          "pets/vignette"
+        ]
+      },
+      "pages/saas/saas-hero-and-nav": {
+        "name": "saas-hero-and-nav",
+        "group": "saas",
+        "description": "saas-hero-and-nav component",
+        "files": [
+          "pages/saas/saas-hero-and-nav.tsx"
+        ],
+        "dependencies": [
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "pets/bg-pattern",
+          "pets/glow",
+          "pets/hero-badge",
+          "pets/nav",
+          "pets/stats"
+        ]
       }
     },
     "pets": {
-      "pets/bg-pattern": {
+      "pets/background-effects/bg-pattern": {
         "name": "bg-pattern",
-        "group": "pets",
+        "group": "background-effects",
         "description": "Background pattern */",
         "files": [
-          "pets/bg-pattern.tsx"
+          "pets/background-effects/bg-pattern.tsx"
         ],
         "dependencies": [
           "class-variance-authority"
@@ -279,12 +332,25 @@
         "devDependencies": [],
         "requires": []
       },
-      "pets/glow": {
+      "pets/background-effects/flicker": {
+        "name": "flicker",
+        "group": "background-effects",
+        "description": "flicker component",
+        "files": [
+          "pets/background-effects/flicker.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/background-effects/glow": {
         "name": "glow",
-        "group": "pets",
+        "group": "background-effects",
         "description": "glow component",
         "files": [
-          "pets/glow.tsx"
+          "pets/background-effects/glow.tsx"
         ],
         "dependencies": [
           "class-variance-authority"
@@ -293,6 +359,160 @@
         "requires": [
           "lib:utils"
         ]
+      },
+      "pets/background-effects/matrix-bg": {
+        "name": "matrix-bg",
+        "group": "background-effects",
+        "description": "matrix-bg component",
+        "files": [
+          "pets/background-effects/matrix-bg.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
+      },
+      "pets/background-effects/vignette": {
+        "name": "vignette",
+        "group": "background-effects",
+        "description": "vignette component",
+        "files": [
+          "pets/background-effects/vignette.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
+      },
+      "pets/components/code-block": {
+        "name": "code-block",
+        "group": "components",
+        "description": "code-block component",
+        "files": [
+          "pets/components/code-block.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils",
+          "pets/copy-button"
+        ]
+      },
+      "pets/components/gradient-line": {
+        "name": "gradient-line",
+        "group": "components",
+        "description": "gradient-line component",
+        "files": [
+          "pets/components/gradient-line.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
+      },
+      "pets/components/hero-badge": {
+        "name": "hero-badge",
+        "group": "components",
+        "description": "hero-badge component",
+        "files": [
+          "pets/components/hero-badge.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority",
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": []
+      },
+      "pets/components/nav": {
+        "name": "nav",
+        "group": "components",
+        "description": "nav component",
+        "files": [
+          "pets/components/nav.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority",
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/components/stats": {
+        "name": "stats",
+        "group": "components",
+        "description": "stats component",
+        "files": [
+          "pets/components/stats.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/components/tabs": {
+        "name": "tabs",
+        "group": "components",
+        "description": "tabs component",
+        "files": [
+          "pets/components/tabs.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/components/terminal": {
+        "name": "terminal",
+        "group": "components",
+        "description": "terminal component",
+        "files": [
+          "pets/components/terminal.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/effects/glitch": {
+        "name": "glitch",
+        "group": "effects",
+        "description": "glitch component",
+        "files": [
+          "pets/effects/glitch.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/effects/scan-line": {
+        "name": "scan-line",
+        "group": "effects",
+        "description": "scan-line component",
+        "files": [
+          "pets/effects/scan-line.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
       }
     },
     "utils": {}

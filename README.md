@@ -53,3 +53,12 @@ The project uses Changesets for version management. To prepare a new version:
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Variant Management**: [Class Variance Authority](https://cva.style/)
 - **Icons**: [Lucide React](https://lucide.dev/)
+
+<!-- 
+pnpm build:registry
+pnpm changeset 
+stage-commit
+changeset version
+bump version
+chore-commit
+ -->
