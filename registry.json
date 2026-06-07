@@ -260,9 +260,9 @@
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "pets/bg-pattern",
-          "pets/code-block",
-          "pets/tabs"
+          "pets/background-effects/bg-pattern",
+          "pets/components/code-block",
+          "pets/components/tabs"
         ]
       },
       "pages/not-found/not-found-ambient": {
@@ -275,8 +275,8 @@
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "pets/bg-pattern",
-          "pets/glow"
+          "pets/background-effects/bg-pattern",
+          "pets/background-effects/glow"
         ]
       },
       "pages/not-found/not-found-hacker": {
@@ -289,13 +289,13 @@
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "pets/flicker",
-          "pets/glitch",
-          "pets/gradient-line",
-          "pets/matrix-bg",
-          "pets/scan-line",
-          "pets/terminal",
-          "pets/vignette"
+          "pets/background-effects/flicker",
+          "pets/background-effects/matrix-bg",
+          "pets/background-effects/vignette",
+          "pets/components/gradient-line",
+          "pets/components/terminal",
+          "pets/effects/glitch",
+          "pets/effects/scan-line"
         ]
       },
       "pages/saas/saas-hero-and-nav": {
@@ -310,11 +310,11 @@
         ],
         "devDependencies": [],
         "requires": [
-          "pets/bg-pattern",
-          "pets/glow",
-          "pets/hero-badge",
-          "pets/nav",
-          "pets/stats"
+          "pets/background-effects/bg-pattern",
+          "pets/background-effects/glow",
+          "pets/components/hero-badge",
+          "pets/components/nav",
+          "pets/components/stats"
         ]
       }
     },
@@ -396,8 +396,8 @@
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "lib:utils",
-          "pets/copy-button"
+          "components/pets/copy-button",
+          "lib:utils"
         ]
       },
       "pets/components/gradient-line": {
