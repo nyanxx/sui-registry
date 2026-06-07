@@ -1,5 +1,11 @@
 # sui-registry
 
+## 0.5.1
+
+### Patch Changes
+
+- 6abff34: bug fix
+
 ## 0.5.0
 
 ### Minor Changes
