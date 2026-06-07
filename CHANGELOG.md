@@ -1,5 +1,11 @@
 # sui-registry
 
+## 0.5.0
+
+### Minor Changes
+
+- 590da63: Added new pages and pets
+
 ## 0.4.0
 
 ### Minor Changes

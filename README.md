@@ -57,8 +57,10 @@ The project uses Changesets for version management. To prepare a new version:
 <!-- 
 pnpm build:registry
 pnpm changeset 
-stage-commit
-changeset version
-bump version
-chore-commit
+git add .
+git commit
+pnpm changeset version
+pnpm bump
+git add .
+git commit -m "chore: release v*"
  -->
