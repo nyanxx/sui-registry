@@ -1,5 +1,15 @@
 # sui-registry
 
+## 0.6.0
+
+### Minor Changes
+
+- bcd7452: added different types of navbars
+
+### Patch Changes
+
+- 49ab410: Added missing pet copy-button.tsx
+
 ## 0.5.1
 
 ### Patch Changes
