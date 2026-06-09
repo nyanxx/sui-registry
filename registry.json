@@ -75,6 +75,262 @@
           "shadcn:separator"
         ]
       },
+      "components/navs/aesthetic-navbar": {
+        "name": "aesthetic-navbar",
+        "group": "navs",
+        "description": "aesthetic-navbar component",
+        "files": [
+          "components/navs/aesthetic-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/apple-navbar": {
+        "name": "apple-navbar",
+        "group": "navs",
+        "description": "apple-navbar component",
+        "files": [
+          "components/navs/apple-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/base/navbase": {
+        "name": "navbase",
+        "group": "navs",
+        "description": "navbase component",
+        "files": [
+          "components/navs/base/navbase.tsx"
+        ],
+        "dependencies": [
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "components/navs/dock-navbar/dock-navbar-a": {
+        "name": "dock-navbar-a",
+        "group": "navs",
+        "description": "dock-navbar-a component",
+        "files": [
+          "components/navs/dock-navbar/dock-navbar-a.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/dock-navbar/dock-navbar-b": {
+        "name": "dock-navbar-b",
+        "group": "navs",
+        "description": "dock-navbar-b component",
+        "files": [
+          "components/navs/dock-navbar/dock-navbar-b.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/dock-navbar/dock-navbar-c": {
+        "name": "dock-navbar-c",
+        "group": "navs",
+        "description": "dock-navbar-c component",
+        "files": [
+          "components/navs/dock-navbar/dock-navbar-c.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/fun-navbar": {
+        "name": "fun-navbar",
+        "group": "navs",
+        "description": "fun-navbar component",
+        "files": [
+          "components/navs/fun-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": []
+      },
+      "components/navs/futuristic-navbar": {
+        "name": "futuristic-navbar",
+        "group": "navs",
+        "description": "futuristic-navbar component",
+        "files": [
+          "components/navs/futuristic-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/glass-navbar": {
+        "name": "glass-navbar",
+        "group": "navs",
+        "description": "glass-navbar component",
+        "files": [
+          "components/navs/glass-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/linear-navbar": {
+        "name": "linear-navbar",
+        "group": "navs",
+        "description": "linear-navbar component",
+        "files": [
+          "components/navs/linear-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/mega/mega-click-navbar": {
+        "name": "mega-click-navbar",
+        "group": "navs",
+        "description": "mega-click-navbar component",
+        "files": [
+          "components/navs/mega/mega-click-navbar.tsx"
+        ],
+        "dependencies": [
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/mega/mega-hover-navbar": {
+        "name": "mega-hover-navbar",
+        "group": "navs",
+        "description": "mega-hover-navbar component",
+        "files": [
+          "components/navs/mega/mega-hover-navbar.tsx"
+        ],
+        "dependencies": [
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/mega/mega-hybrid-navbar": {
+        "name": "mega-hybrid-navbar",
+        "group": "navs",
+        "description": "mega-hybrid-navbar component",
+        "files": [
+          "components/navs/mega/mega-hybrid-navbar.tsx"
+        ],
+        "dependencies": [
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/modern-navbar": {
+        "name": "modern-navbar",
+        "group": "navs",
+        "description": "modern-navbar component",
+        "files": [
+          "components/navs/modern-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/portfolio-navbar": {
+        "name": "portfolio-navbar",
+        "group": "navs",
+        "description": "portfolio-navbar component",
+        "files": [
+          "components/navs/portfolio-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/professional-navbar": {
+        "name": "professional-navbar",
+        "group": "navs",
+        "description": "professional-navbar component",
+        "files": [
+          "components/navs/professional-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/saas-navbar": {
+        "name": "saas-navbar",
+        "group": "navs",
+        "description": "saas-navbar component",
+        "files": [
+          "components/navs/saas-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
+      "components/navs/service-navbar": {
+        "name": "service-navbar",
+        "group": "navs",
+        "description": "service-navbar component",
+        "files": [
+          "components/navs/service-navbar.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "components/navs/base/navbase",
+          "lib:utils"
+        ]
+      },
       "components/typography/typography-blockquote": {
         "name": "typography-blockquote",
         "group": "typography",
