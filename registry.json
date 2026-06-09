@@ -396,7 +396,23 @@
         "dependencies": [],
         "devDependencies": [],
         "requires": [
-          "components/pets/copy-button",
+          "lib:utils",
+          "pets/components/copy-button"
+        ]
+      },
+      "pets/components/copy-button": {
+        "name": "copy-button",
+        "group": "components",
+        "description": "copy-button component",
+        "files": [
+          "pets/components/copy-button.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority",
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
           "lib:utils"
         ]
       },
