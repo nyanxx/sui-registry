@@ -535,6 +535,19 @@
           "pets/background-effects/glow"
         ]
       },
+      "pages/not-found/not-found-arch": {
+        "name": "not-found-arch",
+        "group": "not-found",
+        "description": "not-found-arch component",
+        "files": [
+          "pages/not-found/not-found-arch.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "shadcn:button"
+        ]
+      },
       "pages/not-found/not-found-hacker": {
         "name": "not-found-hacker",
         "group": "not-found",
