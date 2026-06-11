@@ -2,6 +2,24 @@
   "version": "0.6.0",
   "categories": {
     "components": {
+      "components/absolute-theme-toggle": {
+        "name": "absolute-theme-toggle",
+        "group": "components",
+        "description": "absolute-theme-toggle component",
+        "files": [
+          "components/absolute-theme-toggle.tsx"
+        ],
+        "dependencies": [
+          "lucide-react",
+          "next-themes"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils",
+          "shadcn:button",
+          "shadcn:dropdown-menu"
+        ]
+      },
       "components/data-display/list": {
         "name": "list",
         "group": "data-display",
@@ -567,6 +585,37 @@
           "pets/effects/scan-line"
         ]
       },
+      "pages/saas/hero-page-noisebg-": {
+        "name": "hero-page-noisebg-",
+        "group": "saas",
+        "description": "hero-page-noisebg- component",
+        "files": [
+          "pages/saas/hero-page-noisebg-.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "pets/background-effects/bg-noise"
+        ]
+      },
+      "pages/saas/saas-finance-star": {
+        "name": "saas-finance-star",
+        "group": "saas",
+        "description": "saas-finance-star component",
+        "files": [
+          "pages/saas/saas-finance-star.tsx"
+        ],
+        "dependencies": [
+          "lucide-react"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "pets/background-effects/glow-orb",
+          "pets/background-effects/star-field-js",
+          "pets/components/hero-badge",
+          "pets/components/instant-stats"
+        ]
+      },
       "pages/saas/saas-hero-and-nav": {
         "name": "saas-hero-and-nav",
         "group": "saas",
@@ -588,6 +637,17 @@
       }
     },
     "pets": {
+      "pets/background-effects/bg-noise": {
+        "name": "bg-noise",
+        "group": "background-effects",
+        "description": "bg-noise component",
+        "files": [
+          "pets/background-effects/bg-noise.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": []
+      },
       "pets/background-effects/bg-pattern": {
         "name": "bg-pattern",
         "group": "background-effects",
@@ -601,12 +661,38 @@
         "devDependencies": [],
         "requires": []
       },
+      "pets/background-effects/dot-grid": {
+        "name": "dot-grid",
+        "group": "background-effects",
+        "description": "dot-grid component",
+        "files": [
+          "pets/background-effects/dot-grid.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
+      },
       "pets/background-effects/flicker": {
         "name": "flicker",
         "group": "background-effects",
         "description": "flicker component",
         "files": [
           "pets/background-effects/flicker.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/background-effects/glow-orb": {
+        "name": "glow-orb",
+        "group": "background-effects",
+        "description": "glow-orb component",
+        "files": [
+          "pets/background-effects/glow-orb.tsx"
         ],
         "dependencies": [],
         "devDependencies": [],
@@ -641,6 +727,37 @@
         ],
         "devDependencies": [],
         "requires": []
+      },
+      "pets/background-effects/star-field-css": {
+        "name": "star-field-css",
+        "group": "background-effects",
+        "description": "star-field-css component",
+        "files": [
+          "pets/background-effects/star-field-css.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
+      "pets/background-effects/star-field-js": {
+        "name": "star-field-js",
+        "group": "background-effects",
+        "description": "star-field-js component",
+        "files": [
+          "pets/background-effects/star-field-js.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils",
+          "shadcn:star-field"
+        ]
       },
       "pets/background-effects/vignette": {
         "name": "vignette",
@@ -712,6 +829,21 @@
         "devDependencies": [],
         "requires": []
       },
+      "pets/components/instant-stats": {
+        "name": "instant-stats",
+        "group": "components",
+        "description": "instant-stats component",
+        "files": [
+          "pets/components/instant-stats.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
       "pets/components/nav": {
         "name": "nav",
         "group": "components",
@@ -773,6 +905,19 @@
           "lib:utils"
         ]
       },
+      "pets/effects/blink": {
+        "name": "blink",
+        "group": "effects",
+        "description": "blink component",
+        "files": [
+          "pets/effects/blink.tsx"
+        ],
+        "dependencies": [],
+        "devDependencies": [],
+        "requires": [
+          "lib:utils"
+        ]
+      },
       "pets/effects/glitch": {
         "name": "glitch",
         "group": "effects",
@@ -785,6 +930,19 @@
         "requires": [
           "lib:utils"
         ]
+      },
+      "pets/effects/reveal-animation": {
+        "name": "reveal-animation",
+        "group": "effects",
+        "description": "reveal-animation component",
+        "files": [
+          "pets/effects/reveal-animation.tsx"
+        ],
+        "dependencies": [
+          "class-variance-authority"
+        ],
+        "devDependencies": [],
+        "requires": []
       },
       "pets/effects/scan-line": {
         "name": "scan-line",
