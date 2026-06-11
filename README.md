@@ -55,12 +55,19 @@ The project uses Changesets for version management. To prepare a new version:
 - **Icons**: [Lucide React](https://lucide.dev/)
 
 <!-- 
+
 pnpm build:registry
+
+# alway ask is it worth adding an entry in a changelog for the changes -- not every changes need a changeset. 
+
 pnpm changeset 
 git add .
 git commit
+
+# Bump version (reflect the things of .md files in  .changeset folder)
 pnpm changeset version
 pnpm bump
 git add .
 git commit -m "chore: release v*"
+
  -->
