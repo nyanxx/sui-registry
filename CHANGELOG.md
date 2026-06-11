@@ -1,5 +1,16 @@
 # sui-registry
 
+## 0.7.0
+
+### Minor Changes
+
+- 955e043: Added new not-found page
+- 5a58c21: 
+  - Added new pages
+  - Added new background-effects
+  - Added new pets components and effects
+  - Registry updated
+
 ## 0.6.0
 
 ### Minor Changes

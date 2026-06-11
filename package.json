@@ -1,6 +1,6 @@
 {
   "name": "sui-registry",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "sui Registry",
   "scripts": {
     "change-commit": "pnpm run build:registry && git status",
